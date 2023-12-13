@@ -1,0 +1,331 @@
+@import url('https://fonts.googleapis.com/css2?family=League+Gothic&family=Rubik:wght@300;400;500;600;700;800;900&display=swap');
+
+$color: #00d150; $background-color:#3d3d3d; $color1: white; $color-light: #aaa; $color-lb: #4d4d4d; $text-transform: uppercase;
+
+*{ font-family: "Rubik" , sans-serif; margin: 0; padding: 0; outline: none; border: none; text-decoration: none; text-transform: capitalize;
+    transition: .2s linear; box-sizing: border-box;
+}
+
+*::selection{background-color: $color1; color: $color;}
+
+html{font-size: 62.5%; overflow-x: hidden; scroll-behavior: smooth; scroll-padding-top: 8rem;}
+
+::-webkit-scrollbar{height: 5rem; width: 1rem;};
+
+::-webkit-scrollbar-track{background-color: transparent;};
+
+::-webkit-scrollbar-thumb{background-color: $color; border-radius: 5rem;};
+
+body{background-color: $background-color;};
+
+section{max-width: 1200px; margin: 0 auto; padding: 2rem;};
+
+//-----------------------------header-------------------------------------------
+.header{position: fixed; top: 0; left: 0; right: 0; z-index: 1000; background-color: $color-lb; 
+
+    .flex{position: relative; display: flex; align-items: center; justify-content: space-between;
+
+        .logo{color: $color1; font-size: 25px;}; .logo::first-letter{color: $color;}
+        .navbar{ background-color: $color-lb;
+            a{margin-left: 2rem; color: $color-light; font-size: 21px;} a:hover{color: $color;};
+        };
+
+        #meun-btu{color: $color1; font-size: 2.5rem; cursor: pointer; display:none;};
+        
+        #meun-btu.fa-times{transform: rotate(360deg); transition: .5s;}
+        
+        
+    }
+}
+
+//-----------------------------home--------------------------------------------------
+.home{margin-top: 6rem;
+
+    .row{display: flex; align-items: center; flex-wrap: wrap-reverse; gap: 15px; };
+
+    .contact{flex: 1 1 40rem; text-align: center;
+
+        h2{margin-bottom: 10px; font-size: 10rem; color: $color1; line-height: 110px; letter-spacing: 2px;
+        
+            span{color: $color;};
+        };
+
+        .but{color: $color1; background-color: $color-lb; font-size: 18px; padding: 10px 30px; margin-top: 10px; border-radius: 50px;
+
+            cursor: pointer;
+
+        }; .but:hover{color: $color-lb; background-color: $color1;}; .but:active{color: $color1; background-color: $color;};
+    };
+
+    .image{flex:1 1 40rem; 
+        
+        img{width: 100%;};
+    };
+
+};
+
+//-----------------------------count--------------------------------
+
+.count{
+    .box-container{display: grid; grid-template-columns: repeat(auto-fit, minmax(270px , 1fr)); gap: 15px; 
+        align-items: flex-start;
+
+        .box{background-color: $color-lb; border-radius: 10px; padding: 20px; display: flex; align-items: center; justify-content: center;
+            gap: 25px; text-align: center;
+
+            i{font-size: 50px; color: $color;};
+
+            .content{
+                h2{font-size: 23px; color: $color1; margin-bottom: 5px;};
+                p{font-size: 15px; color: $color-light;};
+            };
+        };
+    };
+    };
+//-------------------------------------about us----------------------------------
+.about{
+
+    .row{display: flex; flex-wrap: wrap; gap: 25px; align-items: center;
+    
+        .image{flex:1 1 40rem;
+            img{width: 100%;};
+        };
+
+        .content{flex:1 1 40rem; text-align: center;
+
+            h2{color: $color1; text-align: center; font-size: 35px;};
+
+            p{color: $color-light; font-size: 15px; text-align: center; line-height: 35px; padding: 1.5rem 0;};
+
+            .but{color: $color1; background-color: $color-lb; font-size: 18px; padding: 10px 30px; border-radius: 50px; margin-bottom: 50px; margin-top: -30px;
+
+                cursor: pointer;
+        
+            }; .but:hover{color: $color-lb; background-color: $color1;}; .but:active{color: $color1; background-color: $color;};
+            
+        };
+    };
+};
+
+
+//-----------------------------------courses----------------------------------
+.courses{
+
+    .title{font-size: 3.5rem; text-align: center; color: $color1; margin-bottom: 3rem; text-transform: uppercase;
+
+        span{color: $color; text-transform: uppercase;}
+    };
+
+    .courses-slider{ margin-bottom: 5rem;
+
+        .content{
+
+            .slider{text-align: center; border-radius: .5rem; background-color: $color-lb; margin-bottom: 50px; padding: 20px; margin-top: 4rem;
+
+                img{width: 100%; height: 280px;};
+                h3{font-size: 2.3rem; margin: 1.5rem 0; color: $color1;};
+                p{color: $color-light; line-height: 1.5; font-size: 1.5rem;};
+            }; .slider:hover{background-color: $color1;    h3{color: $color;} transition: linear .5s;};
+        };
+    };
+};
+
+span.swiper-pagination-bullet.swiper-pagination-bullet-active{background-color: $color;};
+
+//--------------------------------------teachers------------------------------------------
+.teachers{
+    
+    .title{font-size: 3.5rem; text-align: center; color: $color1; margin-bottom: 3.7rem; text-transform: uppercase;
+
+        span{color: $color; text-transform: uppercase;}
+    };
+
+    .teachers-slider{
+
+        .content{ 
+
+            .slide{
+                position: relative; overflow: hidden; margin-bottom: 4rem;
+
+                img{height: 55rem; width: 100%; object-fit: cover; border-radius: 5px;};
+                h3{margin-top: 1.5rem; font-size: 2rem; color: $color1; text-align: center;};
+
+                .share{position: absolute; top: 10px; right: -50px;
+
+                    a{display: block; margin-top: 10px; height: 4.5rem; width: 4.5rem; line-height: 4.5rem; border-radius: 5px; background-color: $color1;
+                        color: $color-lb; text-align: center; font-size: 20px;
+                    }; a:hover{color: $color1; background-color: $color;};
+                };  
+            };.slide:hover{.share{right: 300px; transform: rotatez(360deg); transition: .7s; }}
+        };
+    };
+};
+
+
+//-------------------------------------review-------------------------------------------
+.reviews{
+
+    .title{font-size: 3.5rem; text-align: center; color: $color1; margin-bottom: 3.7rem; text-transform: uppercase;
+
+        span{color: $color; text-transform: uppercase;}
+    };
+
+    .review-slider{
+
+        .slide{ margin-bottom:3rem;  background-color: $color-lb;  border-radius: 5px;  padding: 2rem;
+
+            p{line-height: 2; font-size: 1.6rem; color: $color-light;};
+
+            .user{display: flex; align-items: center; gap: 1.5rem;      img{width: 7.5rem; height: 7.5rem; border-radius: 50%; object-fit: cover;};
+
+              h3{font-size: 1.8rem; color: $color1; margin-bottom: .7rem;};        i{font-size: 1.3rem; color: $color;};
+
+            };
+        };
+    };
+};
+
+//-------------------------------------contact---------------------------------------
+.contact{
+
+    .title{font-size: 3.5rem; text-align: center; color: $color1; margin-bottom: 3.7rem; text-transform: uppercase;
+
+        span{color: $color; text-transform: uppercase;}
+    };
+
+    .row{display: flex; align-items: center; flex-wrap: wrap; gap: 1.5rem;
+
+        .img{flex: 1 1 40rem;
+            img{width: 100%;}
+        }; 
+
+        form{flex: 1 1 40rem; 
+
+            span{color: $color-light; font-size: 1.6rem;}
+            
+            #box{width: 100%; margin-top: 1rem; margin-bottom: 2rem; border-radius: .5rem; background-color: $color-lb; font-size: 1.8rem; color: $color1;
+            
+            padding: 1.4rem;}
+
+            .box{width: 100%; margin-top: 1rem; margin-bottom: 2rem; border-radius: .5rem; background-color: $color-lb; font-size: 1.8rem; color: $color1;
+            
+                padding: 1.4rem;
+
+            };
+
+            .radio{margin-top: 20px; margin-bottom: 10px;
+            
+                label{color: $color-light; font-size: 1.6rem; margin-left: 5px; cursor: pointer;};
+
+                #female{margin-left: 20px;}; 
+                #female:checked ~ label{color: $color;};
+
+                #male:checked ~ label[for="male"]{color: $color;};
+
+                input{width: 22px; height: 22px; appearance: none; background-color: $color-light; margin-bottom: -.4rem; cursor: pointer;};
+                input:checked{background-color: $color; border-radius: 5rem;}
+            };
+
+
+            .btn{color: $color1; background-color: $color-lb; font-size: 18px; padding: 10px 30px; margin-top: 10px; border-radius: 50px;
+
+                cursor: pointer;
+    
+            };.btn:hover{color: $color-lb; background-color: $color1;}; .btn:active{color: $color1; background-color: $color;};
+        };
+        
+    };
+};
+
+//----------------------------------footer-----------------------------------------
+.footer{background-color: $color-lb; text-align: center;
+
+    .share{
+
+        a{margin:0 .3rem; height: 4.5rem; width: 4.5rem; line-height: 4.5rem; border-radius: 50%; font-size: 2rem; color: $color1; background-color: $background-color;};
+        a:hover{background-color: $color;};
+    };
+
+    
+    .credit{margin-top: 2.5rem; padding: 1.5rem; padding-top: 2.5rem; border-top: .1rem solid $color1; font-size: 2rem; color: $color-light;
+    
+        span{color: $color;};
+    };
+};
+
+
+
+//!------------------------------------@MEDIA------------------------------------------------//
+
+@media(max-width:991px){
+
+    html{font-size: 55%;};
+
+    .home{
+
+        .contact{
+
+            h2{font-size: 8rem; line-height: 80px};
+        };
+    };
+};
+
+@media(max-width:768px){ 
+
+    .header{
+        .flex{
+         #meun-btu{display:block;};
+
+         .navbar{position: absolute; top: 99%; left: 0; right: 0; border-top: 10px solid $color-light; border-bottom: 10px solid $color-light; background-color: $color-lb;
+            clip-path: polygon(0 0 , 100% 0 , 100% 0 , 0 0);
+        
+            a{display: block; margin: 1.5rem;};
+         };
+         .navbar.active{clip-path: polygon(0 0 , 100% 0 , 100% 100% , 0 100%);};
+        
+        
+        
+        };
+    };
+
+    .home{
+
+        .contact{
+
+            h2{font-size: 6rem;};
+        };
+    };
+    
+    .teachers{
+        .title{font-size: 4rem;}
+    }
+};
+
+
+@media(max-width:450px){
+
+    html{font-size: 50%;};  
+
+    
+    .home{
+
+        .row{
+
+          .contact{
+
+             h2{font-size: 5rem; line-height: 45px};
+
+          };
+        }; 
+    };
+
+    .about{
+
+        .row{
+
+            .content{
+                font-size: 5rem;
+            }
+        }
+    }
+};
